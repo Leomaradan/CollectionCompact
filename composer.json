@@ -1,5 +1,6 @@
 {
     "name": "leomaradan/collection-compact",
+    "description": "Compact collection of numbers to string",
     "type": "library",
     "license": "MIT",
     "require": {
