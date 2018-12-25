@@ -6,7 +6,7 @@ class Compact {
 	public static function compact($volumes) {
 
 		if(!is_array($volumes)) {
-			throw new Exception("$volumes is not an array", 1);
+			throw new \Exception("$volumes is not an array", 1);
 		}
 
 
@@ -43,7 +43,7 @@ class Compact {
 				if(in_array($i,$volumes)) {
 					$mode = 'unique';
 					$string .= (',' . $i);
-				}				
+				}
 			}
 
 			if($i == $max && $mode == 'follow') {
@@ -52,5 +52,5 @@ class Compact {
 		}
 
 		return $string;
-	}	
+	}
 }
