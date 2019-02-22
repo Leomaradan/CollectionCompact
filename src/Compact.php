@@ -54,20 +54,20 @@ class Compact {
 		return $string;
 	}
 
-	public function unpack($packedString) {
+	public static function unpack($packedString) {
 
 		if(!is_string($packedString)) {
 			throw new \Exception("$packedString is not a string", 1);
 		}
 
-		$volumes = $packedString.split(',');
+		$volumes = explode(',', $packedString);
 		$volumes_list = [];
 
 		foreach ($volumes as $volume) {
 			if(is_numeric($volume)) {
 				$volumes_list[] = $volume;
 			} else {
-				$group = $volume.split('-');
+				$group = explode('-', $volume);
 				$start = $group[0];
 				$end = $group[1];
 				for ($i=$start; $i <= $end ; $i++) {
