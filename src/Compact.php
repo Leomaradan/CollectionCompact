@@ -56,6 +56,10 @@ class Compact {
 
 	public static function unpack($packedString) {
 
+		if(is_numeric($packedString)) {
+			return [$packedString];
+		}
+
 		if(!is_string($packedString)) {
 			throw new \Exception("$packedString is not a string", 1);
 		}
