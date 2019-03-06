@@ -64,6 +64,10 @@ class Compact {
 			throw new \Exception("$packedString is not a string", 1);
 		}
 
+		if($packedString == "") {
+			return [];
+		}
+
 		$volumes = explode(',', $packedString);
 		$volumes_list = [];
 
